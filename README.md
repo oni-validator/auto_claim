@@ -25,3 +25,6 @@ Edit value of 10 to desired integer, *whole value* not denom
 `crontab -e`
 
 `0 */12 * * * /path/to/autoclaim.sh`  <<< add to bottom of file and save
+
+### Logs
+Logs of successful tx's will be located in $HOME/claim.log
