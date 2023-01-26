@@ -21,3 +21,7 @@ Edit value of 10 to desired integer, *whole value* not denom
 ### Run Script
 `./auto_claim.sh`
 
+### Run Script Every 12 Hours
+`crontab -e`
+
+`0 */12 * * * /path/to/autoclaim.sh`  <<< add to bottom of file and save
