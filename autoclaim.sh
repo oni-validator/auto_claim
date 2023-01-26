@@ -26,8 +26,8 @@ then
     #claim
     echo "${PASSWORD}" | ${DAEMON} tx distribution withdraw-rewards ${VALOPER} --commission --node ${NODE} --from ${KEYRING} --chain-id ${CHAINID}  --gas-prices 0.0025${DENOM} -y  >>  $HOME/claim.log
     echo "Total is greater than 10 is claiming. Keep the change you filthy animal"
-    sleep 60
     echo "Sleeping for 60 seconds."
+    sleep 60
     #delegate
     echo "${PASSWORD}" | ${DAEMON} tx staking delegate ${VALOPER} ${WALLET}${DENOM} --from ${KEYRING} --node ${NODE} --chain-id ${CHAINID} --gas auto --gas-adjustment 1.25 --gas-prices 0.0025${DENOM} -y >>  $HOME/claim.log
 else
