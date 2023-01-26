@@ -23,8 +23,9 @@ TOTAL="$(echo "scale=0; (${COMMISSION:-0} + ${REWARDS:-0}) / 1" | bc -l)"
 #check if worth claiming, claim, and delegate if so
 if [ "$TOTAL" -gt 10 ]
 then
+    echo "Total is greater than or equal to 10, claiming. Keep the change you filthy animal!"
     DELEGATING="$(echo "scale=0; $TOTAL * ( 10 ^ ${DECIMALS} ) / 1" | bc -l)"
-    #log what we're trying to do and when
+    #log
     echo "$(date -u), claiming $TOTAL" >> $HOME/claim.log
     #claim
     echo "${PASSWORD}" | ${DAEMON} tx distribution withdraw-rewards ${VALOPER} --commission --node ${NODE} --from ${KEYRING} --chain-id ${CHAINID}  --gas-prices 0.0025${DENOM} -y --broadcast-mode block >>  $HOME/claim.log
