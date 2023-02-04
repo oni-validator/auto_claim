@@ -4,12 +4,12 @@
 `cd auto_claim && chmod +x auto_claim.sh`
 ## Edit Variables 
 ```
+#vars
 DAEMON=gaiad
 DENOM=uatom
-NODE=http://localhost:26656
+DECIMALS=6
+NODE=http://localhost:26657
 CHAINID=cosmoshub-4
-VALOPER=cosmosvaloper16s96n9k9zztdgjy8q4qcxp4hn7ww98qkrka4zk
-ADDRESS=cosmos16s96n9k9zztdgjy8q4qcxp4hn7ww98qkxzfqw9
 PASSWORD=supersecretpassword
 KEYRING=mykeyring # gaiad keys list > name:
 ```
